@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sachin Khyalia</title>
+
+    <style>
+      body {
+        background-color: #121212;
+        font-family: "Inter", sans-serif;
+        line-height: 1.4;
+        padding: 0 10px;
+        margin: 50px auto;
+        max-width: 650px;
+        text-align: left;
+        font-weight: 300;
+        color: whitesmoke;
+      }
+      #age-counter {
+        font-size: 20px;
+        font-weight: 400;
+        /* margin: 20px; */
+      }
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 style="font-weight: 400">Sachin Khyalia</h1>
+    <hr />
+    <p style="font-size: 17px">
+      Many of the things we believe are wrong.
+      <br /><br />
+      Putting everything into slowing this down... <br />
+      <em>&ldquo;Less Trust, More Truth&ldquo;</em>
+    </p>
+
+    <div id="age-counter">
+      Chronological Age- <span id="age">0.00000000000000000000</span> years
+    </div>
+
+    <script>
+      function updateAge() {
+        const birthday = new Date("2004-12-27");
+        const currentDate = new Date();
+        const ageInMilliseconds = currentDate - birthday;
+        const ageInSeconds = ageInMilliseconds / 1000;
+        const ageInYears = ageInSeconds / (60 * 60 * 24 * 365.25);
+        const ageWithDecimal = ageInYears.toFixed(20);
+        document.getElementById("age").textContent = ageWithDecimal;
+        requestAnimationFrame(updateAge);
+      }
+
+      updateAge();
+    </script>
+  </body>
+</html>
