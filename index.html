@@ -7,15 +7,15 @@
 
     <style>
       body {
-        background-color: #121212;
+        background-color: #ffffff;
         font-family: "Inter", sans-serif;
         line-height: 1.4;
         padding: 0 10px;
         margin: 50px auto;
         max-width: 650px;
         text-align: left;
-        font-weight: 300;
-        color: whitesmoke;
+        font-weight: 400;
+        color: #000000;
       }
       #age-counter {
         font-size: 20px;
@@ -51,7 +51,7 @@
         const ageInMilliseconds = currentDate - birthday;
         const ageInSeconds = ageInMilliseconds / 1000;
         const ageInYears = ageInSeconds / (60 * 60 * 24 * 365.25);
-        const ageWithDecimal = ageInYears.toFixed(20);
+        const ageWithDecimal = ageInYears.toFixed(8);
         document.getElementById("age").textContent = ageWithDecimal;
         requestAnimationFrame(updateAge);
       }
